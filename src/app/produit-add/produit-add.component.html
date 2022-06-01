@@ -1,0 +1,26 @@
+   <form (ngSubmit)="addProduit(prodForm)" #prodForm="ngForm">
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>ID de produit</mat-label>
+      <input matInput  name="_id" id="_id" ngModel required minlength="2">
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Titre de produit</mat-label>
+      <input matInput name="titre" id="titre" ngModel required minlength="2">
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Description de produit</mat-label>
+      <input matInput name="description" id="description" ngModel required minlength="2">
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Prix de produit</mat-label>
+      <input matInput  name="prix" id="prix" ngModel required minlength="3">
+    </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" type="submit">
+      Add
+    </button>
+  </form>
+  
