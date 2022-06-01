@@ -9,20 +9,20 @@ import { produitService } from '../service/produit.service';
 })
 export class ProduitAddComponent implements OnInit {
 
-  constructor(private produitService: produitService) {}
+  constructor(private ProduitService: produitService) {}
 
   ngOnInit(): void {}
 
   addProduit(prodForm: NgForm) {
-    this.produitService.getProduit();
+    this.ProduitService.getProduit();
 
     if (prodForm.invalid) {
       return;
     }
     alert("Produit Ajoutée");
 
-    this.produitService.addProduit(
-      new Produit(prodForm.value.prodId,prodForm.value.prodTitre,prodForm.value.prodDesc,prodForm.value.prodPrix)
+    this.ProduitService.addProduit(
+      new Produit(prodForm.value.prod_id,prodForm.value.prodtitre,prodForm.value.proddescription,prodForm.value.prodprix)
 
     );
 
